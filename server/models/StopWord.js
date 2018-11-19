@@ -152,7 +152,9 @@ const stopWordList =
 ];
 
 const isStopWord = (word) => {
-    //TODO Fill this in
-    return false;
-};
+    // Check if word is a part of the stop word list
+    const isStopWord = (word) => {
+    return stopWordList.indexOf(word) !== -1;
+}
 
+exports.isStopWord = isStopWord;
