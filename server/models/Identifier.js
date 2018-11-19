@@ -48,5 +48,13 @@ const Dates = [
     },
 ];
 
+
+const findDateWord = (word) => {
+    const matchesDateName = ({ names }, word) => names.filter(name => name === word);
+
+    return Dates.find(date => matchesDateName(date, word).length > 0);
+};
+
 module.exports.MealTimes = MealTimes;
 module.exports.Dates = Dates;
+module.exports.findDateWord = findDateWord;
